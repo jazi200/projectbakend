@@ -1,0 +1,14 @@
+{% extends "project/base.html" %}
+
+{% block title %}Create an account{% endblock %}
+
+{% block content %}
+    <form action="." method="post" style="display: inline-block;
+    min-width: 150px;
+    vertical-align: top; color: aliceblue;">
+        {{ user_form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" style=" min-width: 150px;
+            font-size: 16px;" value="Регистрация"></p>
+    </form>
+{% endblock %}
